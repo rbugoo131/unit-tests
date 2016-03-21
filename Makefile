@@ -1,4 +1,4 @@
-EXEC = bin-swap bin-bubble
+EXEC = bin-swap bin-bubble bin-merge
 .PHONY: all
 all: $(EXEC)
 
@@ -9,7 +9,8 @@ LDFLAGS =
 OBJS := \
 	swap.o \
 	bubble.o \
-	stub.o
+	stub.o \
+	merge.o
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
